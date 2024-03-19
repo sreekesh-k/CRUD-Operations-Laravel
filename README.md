@@ -9,7 +9,7 @@
 <p align="center"><img src="public/images/Update1.png" width = 85% ></p>
 <p align="center"><img src="public/images/Update2.png" width = 85% ></p>
 
-## READ
+## DELETE
 <p align="center"><img src="public/images/Delete.png" width = 85% ></p>
 
 ## License
