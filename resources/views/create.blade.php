@@ -24,18 +24,20 @@
             </ul>
         @endif
     </div>
-    <form action="{{ route('create.confirm') }}" method="POST">
-        @csrf
-        <div>
-            <input type="text" name="name" placeholder="ItemName">
-        </div>
-        <div>
-            <input type="text" name="description" placeholder="Description">
-        </div>
-        <div>
-            <input type="submit" name="submit" value="Confirm">
-        </div>
-    </form>
+    <div class="container">
+        <form class="ms-auto me-auto" style="width:400px;" action="{{ route('create.confirm') }}" method="POST">
+            @csrf
+            <div class="mb-3">
+                <label class="form-label">Item Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Apple">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <input type="text" class="form-control" name ="description" placeholder="Green Apple">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
