@@ -24,19 +24,24 @@
                 @endforeach
             </ul>
         @endif
+        <div class="container">
+            <form class="ms-auto me-auto" style="width:400px;" action="{{ route('update.confirm', ['item' => $item]) }}"
+                method="POST">
+                @csrf
+                <div class="mb-3">
+                    <label class="form-label">Item Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Apple"
+                        value="{{ $item->name }}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <input type="text" class="form-control" name ="description" placeholder="Green Apple"
+                        value="{{ $item->description }}">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </div>
-    <form action="{{ route('update.confirm', ['item' => $item]) }}" method="POST">
-        @csrf
-        <div>
-            <input type="text" name="name" placeholder="ItemName" value="{{ $item->name }}">
-        </div>
-        <div>
-            <input type="text" name="description" placeholder="Description" value="{{ $item->description }}">
-        </div>
-        <div>
-            <input type="submit" name="submit" value="Confirm">
-        </div>
-    </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
